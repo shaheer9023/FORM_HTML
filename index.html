@@ -1,0 +1,45 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Contact Form</title>  
+    <link rel="stylesheet" href="styles.css"> <!-- CSS file ko link karein -->  
+</head>  
+<body>  
+    <div class="container">  
+        <form id="contact-form">  
+            <h1 class="heading">GET in touch</h1>  
+            <div class="row">  
+                <div class="column left">  
+                    <label class="label">Tell me your name:</label>  
+                    <input type="text" placeholder="Enter your name" class="input" required>  
+                </div>  
+                <div class="column right">  
+                    <label class="label">Enter your email:</label>  
+                    <input type="email" placeholder="Enter your email" class="input" required>  
+                </div>  
+            </div>  
+            <label class="label">Enter website:</label>  
+            <input type="text" placeholder="Enter website" class="input">  
+            <label class="label">Enter message:</label>  
+            <textarea placeholder="Enter message" class="textarea" required></textarea>  
+            <div class="button-container">  
+                <button type="submit" class="submit-button">Submit</button>  
+            </div>  
+        </form>  
+    </div>  
+
+    <script>  
+        // Form submit hone par alert dikhana  
+        document.getElementById('contact-form').addEventListener('submit', function(e) {  
+            e.preventDefault();  
+            const name = this[0].value;  
+            const email = this[1].value;  
+            const website = this[2].value;  
+            const message = this[3].value;  
+            alert(`Name: ${name}\nEmail: ${email}\nWebsite: ${website}\nMessage: ${message}`);  
+        });  
+    </script>  
+</body>  
+</html>
